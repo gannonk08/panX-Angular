@@ -1,0 +1,42 @@
+<h1>{{mainCtrl.greeting}}</h1>
+
+<table class="table table-striped" ng-init="mainCtrl.getMarketData()">
+  <thead>
+    <tr>
+      <th>
+        Bid
+      </th>
+      <th>
+        date
+      </th>
+      <th>
+        LocationLat
+      </th>
+      <th>
+        LocationLon
+      </th>
+      <th>
+        Name
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="comd in mainCtrl.marketInfo">
+      <td>
+        {{comd.bid}}
+      </td>
+      <td>
+        {{comd.date}}
+      </td>
+      <td>
+        {{comd.location.lat}}
+      </td>
+      <td>
+        {{comd.location.lon}}
+      </td>
+      <td>
+        {{comd.name}}
+      </td>
+    </tr>
+  </tbody>
+</table>
